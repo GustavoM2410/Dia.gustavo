@@ -1,24 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>centralizando uma imagem usando text align center</title>
-    <style>.img-container { text-align: center; }</style>
+    <title>Tabela de Dados Pessoais</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
-    <table border="1"></table>
-<tr></tr>
-<td>celula 1, linha 1 </td>
-<td>celula 2, linha 2</td>
-</tr>
-<tr>
-    <td> celula 1, linha 2 </td>
-    <td> celula 2 linha 1</td>
-    </tr>
-</table>
+    <h1>Tabela de Dados Pessoais</h1>
 
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Feminino</th>
+                <th>Masculino</th>
+                <th>Gmail</th>
+                <th>Telefone</th>
+                <th>Cidade</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ana Silva</td>
+                <td>✔️</td>
+                <td></td>
+                <td>ana.silva@gmail.com</td>
+                <td>(11) 91234-5678</td>
+                <td>São Paulo</td>
+                <td>SP</td>
+            </tr>
+            <tr>
+                <td>João Pereira</td>
+                <td></td>
+                <td>✔️</td>
+                <td>joao.pereira@gmail.com</td>
+                <td>(21) 98765-4321</td>
+                <td>Rio de Janeiro</td>
+                <td>RJ</td>
+            </tr>
+            <tr>
+                <td>Maria Oliveira</td>
+                <td>✔️</td>
+                <td></td>
+                <td>maria.oliveira@gmail.com</td>
+                <td>(31) 99876-5432</td>
+                <td>Belo Horizonte</td>
+                <td>MG</td>
+            </tr>
+            <tr>
+                <td>Carlos Souza</td>
+                <td></td>
+                <td>✔️</td>
+                <td>carlos.souza@gmail.com</td>
+                <td>(41) 91234-9876</td>
+                <td>Curitiba</td>
+                <td>PR</td>
+            </tr>
+            <tr>
+                <td>Fernanda Costa</td>
+                <td>✔️</td>
+                <td></td>
+                <td>fernanda.costa@gmail.com</td>
+                <td>(85) 99765-4321</td>
+                <td>Fortaleza</td>
+                <td>CE</td>
+            </tr>
+        </tbody>
+    </table>
 
-</tr>
 </body>
 </html>
