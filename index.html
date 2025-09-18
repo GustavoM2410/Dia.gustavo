@@ -1,83 +1,74 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Contato</title>
+    <title>Tabela de Exemplos</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f4f7;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
         }
-        .form-container {
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        table {
             width: 100%;
-            max-width: 400px;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1 {
-            text-align: center;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
+        th, td {
+            padding: 12px;
+            text-align: left;
             border: 1px solid #ddd;
-            border-radius: 4px;
         }
-        button {
-            width: 100%;
-            padding: 10px;
+        th {
             background-color: #007BFF;
             color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
         }
-        button:hover {
-            background-color: #0056b3;
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
         }
     </style>
 </head>
 <body>
-    <div class="form-container">
-        <h1>Contato</h1>
-        <form id="contactForm">
-            <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Mensagem:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-            
-            <button type="submit">Enviar</button>
-        </form>
-    </div>
 
-    <script>
-        // Função para tratar o envio do formulári
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Evita o envio padrão do formulário
+<h1>Exemplo de Tabela</h1>
 
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Idade</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>João Silva</td>
+            <td>joao@exemplo.com</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Ana Souza</td>
+            <td>ana@exemplo.com</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Pedro Almeida</td>
+            <td>pedro@exemplo.com</td>
+            <td>28</td>
+        </tr>
+    </tbody>
+</table>
 
-            // Aqui você pode colocar o código para enviar os dados via API ou armazenar em algum lugar
-            alert(`Formulário enviado!\nNome: ${name}\nEmail: ${email}\nMensagem: ${message}`);
-
-            // Limpar os campos após o envio
-            document.getElementById('contactForm').reset();
-        });
-    </script>
 </body>
 </html>
