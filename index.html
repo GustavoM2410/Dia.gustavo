@@ -1,89 +1,83 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabela de Dados Pessoais</title>
+    <title>Tabela com Seleções</title>
     <style>
         table {
-            width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
+            width: 320px;
+            margin: 30px auto;
+            font-family: Arial, sans-serif;
         }
-        table, th, td {
-            border: 1px solid black;
-        }
-        th, td {
+        td {
+            border: 1px solid #ccc;
             padding: 10px;
-            text-align: left;
         }
-        th {
+        td.label {
             background-color: #f2f2f2;
+            font-weight: bold;
+            width: 120px;
+        }
+        select, input {
+            width: 100%;
+            padding: 6px;
+            box-sizing: border-box;
         }
     </style>
 </head>
 <body>
-    <h1>Tabela de Dados Pessoais</h1>
 
     <table>
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Feminino</th>
-                <th>Masculino</th>
-                <th>Gmail</th>
-                <th>Telefone</th>
-                <th>Cidade</th>
-                <th>Estado</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Ana Silva</td>
-                <td>✔️</td>
-                <td></td>
-                <td>ana.silva@gmail.com</td>
-                <td>(11) 91234-5678</td>
-                <td>São Paulo</td>
-                <td>SP</td>
-            </tr>
-            <tr>
-                <td>João Pereira</td>
-                <td></td>
-                <td>✔️</td>
-                <td>joao.pereira@gmail.com</td>
-                <td>(21) 98765-4321</td>
-                <td>Rio de Janeiro</td>
-                <td>RJ</td>
-            </tr>
-            <tr>
-                <td>Maria Oliveira</td>
-                <td>✔️</td>
-                <td></td>
-                <td>maria.oliveira@gmail.com</td>
-                <td>(31) 99876-5432</td>
-                <td>Belo Horizonte</td>
-                <td>MG</td>
-            </tr>
-            <tr>
-                <td>Carlos Souza</td>
-                <td></td>
-                <td>✔️</td>
-                <td>carlos.souza@gmail.com</td>
-                <td>(41) 91234-9876</td>
-                <td>Curitiba</td>
-                <td>PR</td>
-            </tr>
-            <tr>
-                <td>Fernanda Costa</td>
-                <td>✔️</td>
-                <td></td>
-                <td>fernanda.costa@gmail.com</td>
-                <td>(85) 99765-4321</td>
-                <td>Fortaleza</td>
-                <td>CE</td>
-            </tr>
-        </tbody>
+        <tr>
+            <td class="label">Nome</td>
+            <td><input type="text" name="nome" placeholder="Digite o nome"></td>
+        </tr>
+        <tr>
+            <td class="label">Gênero</td>
+            <td>
+                <select name="genero">
+                    <option value="">Selecione</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="outro">Outro</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="label">Gmail</td>
+            <td><input type="email" name="gmail" placeholder="exemplo@gmail.com"></td>
+        </tr>
+        <tr>
+            <td class="label">Telefone</td>
+            <td><input type="tel" name="telefone" placeholder="(00) 90000-0000"></td>
+        </tr>
+        <tr>
+            <td class="label">Cidade</td>
+            <td>
+                <select name="cidade">
+                    <option value="">Selecione</option>
+                    <option value="sao-paulo">São Paulo</option>
+                    <option value="rio-de-janeiro">Rio de Janeiro</option>
+                    <option value="belo-horizonte">Belo Horizonte</option>
+                    <option value="salvador">Salvador</option>
+                    <option value="curitiba">Curitiba</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="label">Estado</td>
+            <td>
+                <select name="estado">
+                    <option value="">Selecione</option>
+                    <option value="SP">SP</option>
+                    <option value="RJ">RJ</option>
+                    <option value="MG">MG</option>
+                    <option value="BA">BA</option>
+                    <option value="PR">PR</option>
+                </select>
+            </td>
+        </tr>
     </table>
 
 </body>
