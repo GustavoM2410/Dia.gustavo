@@ -2,56 +2,147 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Formulário de Dados Pessoais</title>
+  <title>Tabela de Dados Pessoais</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h2 {
+      text-align: center;
+      padding: 20px;
+      background-color: #f8f8f8;
+      margin: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+      text-align: left;
+      width: 25%;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      font-size: 1em;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .submit-row {
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-  <h2>Formulário de Dados Pessoais</h2>
-  
-  <form action="#" method="post">
-    <!-- Campo Sexo -->
-    <label for="sexo">Sexo:</label><br>
-    <select name="sexo" id="sexo" required>
-      <option value="">-- Selecione --</option>
-      <option value="masculino">Masculino</option>
-      <option value="feminino">Feminino</option>
-      <option value="outro">Outro</option>
-      <option value="nao_informar">Prefere não dizer</option>
-    </select><br><br>
 
-    <!-- Campo Estado -->
-    <label for="estado">Estado:</label><br>
-    <select name="estado" id="estado" required>
-      <option value="">-- Selecione --</option>
-      <option value="AC">AC - Acre</option>
-      <option value="AL">AL - Alagoas</option>
-      <option value="AP">AP - Amapá</option>
-      <option value="AM">AM - Amazonas</option>
-      <option value="BA">BA - Bahia</option>
-      <option value="CE">CE - Ceará</option>
-      <option value="DF">DF - Distrito Federal</option>
-      <option value="ES">ES - Espírito Santo</option>
-      <option value="GO">GO - Goiás</option>
-      <option value="MA">MA - Maranhão</option>
-      <option value="MT">MT - Mato Grosso</option>
-      <option value="MS">MS - Mato Grosso do Sul</option>
-      <option value="MG">MG - Minas Gerais</option>
-      <option value="PA">PA - Pará</option>
-      <option value="PB">PB - Paraíba</option>
-      <option value="PR">PR - Paraná</option>
-      <option value="PE">PE - Pernambuco</option>
-      <option value="PI">PI - Piauí</option>
-      <option value="RJ">RJ - Rio de Janeiro</option>
-      <option value="RN">RN - Rio Grande do Norte</option>
-      <option value="RS">RS - Rio Grande do Sul</option>
-      <option value="RO">RO - Rondônia</option>
-      <option value="RR">RR - Roraima</option>
-      <option value="SC">SC - Santa Catarina</option>
-      <option value="SP">SP - São Paulo</option>
-      <option value="SE">SE - Sergipe</option>
-      <option value="TO">TO - Tocantins</option>
-    </select><br><br>
+  <h2>Formulário de Dados Pessoais e Mensagem</h2>
 
-    <button type="submit">Enviar</button>
+  <form>
+    <table>
+      <tr>
+        <th>Nome Completo</th>
+        <td><input type="text" name="nome" required></td>
+      </tr>
+      <tr>
+        <th>Sexo</th>
+        <td>
+          <select name="sexo" required>
+            <option value="">-- Selecione --</option>
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+            <option value="outro">Outro</option>
+            <option value="nao_dizer">Prefere não dizer</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <th>Estado</th>
+        <td>
+          <select name="estado" required>
+            <option value="">-- Selecione --</option>
+            <option value="AC">AC - Acre</option>
+            <option value="AL">AL - Alagoas</option>
+            <option value="AP">AP - Amapá</option>
+            <option value="AM">AM - Amazonas</option>
+            <option value="BA">BA - Bahia</option>
+            <option value="CE">CE - Ceará</option>
+            <option value="DF">DF - Distrito Federal</option>
+            <option value="ES">ES - Espírito Santo</option>
+            <option value="GO">GO - Goiás</option>
+            <option value="MA">MA - Maranhão</option>
+            <option value="MT">MT - Mato Grosso</option>
+            <option value="MS">MS - Mato Grosso do Sul</option>
+            <option value="MG">MG - Minas Gerais</option>
+            <option value="PA">PA - Pará</option>
+            <option value="PB">PB - Paraíba</option>
+            <option value="PR">PR - Paraná</option>
+            <option value="PE">PE - Pernambuco</option>
+            <option value="PI">PI - Piauí</option>
+            <option value="RJ">RJ - Rio de Janeiro</option>
+            <option value="RN">RN - Rio Grande do Norte</option>
+            <option value="RS">RS - Rio Grande do Sul</option>
+            <option value="RO">RO - Rondônia</option>
+            <option value="RR">RR - Roraima</option>
+            <option value="SC">SC - Santa Catarina</option>
+            <option value="SP">SP - São Paulo</option>
+            <option value="SE">SE - Sergipe</option>
+            <option value="TO">TO - Tocantins</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <th>Email</th>
+        <td><input type="email" name="email" required></td>
+      </tr>
+      <tr>
+        <th>Assunto</th>
+        <td><input type="text" name="assunto" required></td>
+      </tr>
+      <tr>
+        <th>Mensagem</th>
+        <td><textarea name="mensagem" rows="6" required></textarea></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="submit-row">
+          <button type="submit">Enviar</button>
+        </td>
+      </tr>
+    </table>
   </form>
 
 </body>
