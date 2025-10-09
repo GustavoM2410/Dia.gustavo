@@ -98,6 +98,14 @@
           <td><input type="text" name="nome" required></td>
         </tr>
         <tr>
+          <th>CPF</th>
+          <td>
+            <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" 
+                   pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" 
+                   title="Informe um CPF válido no formato 000.000.000-00" required>
+          </td>
+        </tr>
+        <tr>
           <th>Sexo</th>
           <td>
             <select name="sexo" required>
@@ -151,7 +159,8 @@
         <tr>
           <th>Telefone</th>
           <td>
-            <input type="tel" name="telefone" placeholder="(DDD) 91234-5678" pattern="^\(?\d{2}\)?[\s-]?\d{4,5}-?\d{4}$" required>
+            <input type="tel" name="telefone" placeholder="(DDD) 91234-5678" 
+                   pattern="^\(?\d{2}\)?[\s-]?\d{4,5}-?\d{4}$" required>
           </td>
         </tr>
         <tr>
@@ -182,6 +191,18 @@
 
     </form>
   </div>
+
+  <script>
+    // Máscara para CPF: 000.000.000-00
+    document.getElementById('cpf').addEventListener('input', function (e) {
+      let value = e.target.value.replace(/\D/g, '');
+      if (value.length > 11) value = value.slice(0, 11);
+      value = value.replace(/(\d{3})(\d)/, '$1.$2');
+      value = value.replace(/(\d{3})(\d)/, '$1.$2');
+      value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+      e.target.value = value;
+    });
+  </script>
 
 </body>
 </html>
