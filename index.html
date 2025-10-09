@@ -13,7 +13,7 @@
       padding: 0;
       height: 100%;
       font-family: Arial, sans-serif;
-      background-color: #fce8d5; /* Cor de fundo - tom de pele */
+      background-color: #fce8d5;
     }
 
     h2 {
@@ -33,25 +33,24 @@
       max-width: 1000px;
       border-collapse: collapse;
       margin-bottom: 30px;
-      background-color: #fff5ee; /* tom claro rosado */
+      background-color: #fff5ee;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
     th, td {
       padding: 15px;
-      border: 1px solid #e0b899; /* borda cor de pele */
+      border: 1px solid #e0b899;
       vertical-align: top;
     }
 
     th {
-      background-color: #f2d2b6; /* cabeçalho com tom bege */
+      background-color: #f2d2b6;
       text-align: left;
       width: 30%;
     }
 
     input[type="text"],
     input[type="email"],
-    select,
     textarea {
       width: 100%;
       padding: 8px;
@@ -65,25 +64,38 @@
     button {
       padding: 12px 24px;
       font-size: 1em;
-      background-color: #d9a066; /* botão com tom de pele */
+      background-color: #d9a066;
       color: white;
       border: none;
       cursor: pointer;
     }
 
     button:hover {
-      background-color: #c4884c; /* tom mais escuro no hover */
+      background-color: #c4884c;
     }
 
     .submit-row {
       text-align: center;
     }
 
-    /* Estilo para opções na diagonal */
-    select.diagonal option {
-      transform: rotate(45deg);
-      transform-origin: left bottom;
-      padding: 5px;
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .checkbox-group label {
+      display: flex;
+      align-items: center;
+      font-size: 0.95em;
+      background-color: #fdf2ec;
+      padding: 5px 8px;
+      border: 1px solid #e0b899;
+      border-radius: 4px;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      margin-right: 6px;
     }
   </style>
 </head>
@@ -93,7 +105,7 @@
 
   <div class="form-container">
     <form>
-      
+
       <!-- Tabela: Dados Pessoais -->
       <table>
         <tr>
@@ -106,7 +118,7 @@
         <tr>
           <th>Sexo</th>
           <td>
-            <select name="sexo" class="diagonal" required>
+            <select name="sexo" required>
               <option value="">-- Selecione --</option>
               <option value="masculino">Masculino</option>
               <option value="feminino">Feminino</option>
@@ -116,15 +128,37 @@
           </td>
         </tr>
         <tr>
-          <th>Estado</th>
+          <th>Estados</th>
           <td>
-            <select name="estado" class="diagonal" required>
-              <option value="">-- Selecione --</option>
-              <!-- opções dos estados omitidas para brevidade -->
-              <option value="SP">SP - São Paulo</option>
-              <option value="SE">SE - Sergipe</option>
-              <option value="TO">TO - Tocantins</option>
-            </select>
+            <div class="checkbox-group">
+              <label><input type="checkbox" name="estados[]" value="AC">AC</label>
+              <label><input type="checkbox" name="estados[]" value="AL">AL</label>
+              <label><input type="checkbox" name="estados[]" value="AP">AP</label>
+              <label><input type="checkbox" name="estados[]" value="AM">AM</label>
+              <label><input type="checkbox" name="estados[]" value="BA">BA</label>
+              <label><input type="checkbox" name="estados[]" value="CE">CE</label>
+              <label><input type="checkbox" name="estados[]" value="DF">DF</label>
+              <label><input type="checkbox" name="estados[]" value="ES">ES</label>
+              <label><input type="checkbox" name="estados[]" value="GO">GO</label>
+              <label><input type="checkbox" name="estados[]" value="MA">MA</label>
+              <label><input type="checkbox" name="estados[]" value="MT">MT</label>
+              <label><input type="checkbox" name="estados[]" value="MS">MS</label>
+              <label><input type="checkbox" name="estados[]" value="MG">MG</label>
+              <label><input type="checkbox" name="estados[]" value="PA">PA</label>
+              <label><input type="checkbox" name="estados[]" value="PB">PB</label>
+              <label><input type="checkbox" name="estados[]" value="PR">PR</label>
+              <label><input type="checkbox" name="estados[]" value="PE">PE</label>
+              <label><input type="checkbox" name="estados[]" value="PI">PI</label>
+              <label><input type="checkbox" name="estados[]" value="RJ">RJ</label>
+              <label><input type="checkbox" name="estados[]" value="RN">RN</label>
+              <label><input type="checkbox" name="estados[]" value="RS">RS</label>
+              <label><input type="checkbox" name="estados[]" value="RO">RO</label>
+              <label><input type="checkbox" name="estados[]" value="RR">RR</label>
+              <label><input type="checkbox" name="estados[]" value="SC">SC</label>
+              <label><input type="checkbox" name="estados[]" value="SP">SP</label>
+              <label><input type="checkbox" name="estados[]" value="SE">SE</label>
+              <label><input type="checkbox" name="estados[]" value="TO">TO</label>
+            </div>
           </td>
         </tr>
         <tr>
@@ -133,7 +167,7 @@
         </tr>
       </table>
 
-      <!-- Tabela: Dados de Mensagem -->
+      <!-- Tabela: Dados da Mensagem -->
       <table>
         <tr>
           <th colspan="2">Dados da Mensagem</th>
