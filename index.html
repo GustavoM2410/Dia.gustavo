@@ -13,7 +13,7 @@
       padding: 0;
       height: 100%;
       font-family: Arial, sans-serif;
-      background-color: #fce8d5;
+      background-color: #fce8d5; /* Cor de fundo - tom de pele */
     }
 
     h2 {
@@ -33,24 +33,25 @@
       max-width: 1000px;
       border-collapse: collapse;
       margin-bottom: 30px;
-      background-color: #fff5ee;
+      background-color: #fff5ee; /* tom claro rosado */
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
     th, td {
       padding: 15px;
-      border: 1px solid #e0b899;
+      border: 1px solid #e0b899; /* borda cor de pele */
       vertical-align: top;
     }
 
     th {
-      background-color: #f2d2b6;
+      background-color: #f2d2b6; /* cabeçalho com tom bege */
       text-align: left;
       width: 30%;
     }
 
     input[type="text"],
     input[type="email"],
+    select,
     textarea {
       width: 100%;
       padding: 8px;
@@ -64,38 +65,18 @@
     button {
       padding: 12px 24px;
       font-size: 1em;
-      background-color: #d9a066;
+      background-color: #d9a066; /* botão com tom de pele */
       color: white;
       border: none;
       cursor: pointer;
     }
 
     button:hover {
-      background-color: #c4884c;
+      background-color: #c4884c; /* tom mais escuro no hover */
     }
 
     .submit-row {
       text-align: center;
-    }
-
-    .checkbox-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .checkbox-group label {
-      display: flex;
-      align-items: center;
-      font-size: 0.95em;
-      background-color: #fdf2ec;
-      padding: 5px 8px;
-      border: 1px solid #e0b899;
-      border-radius: 4px;
-    }
-
-    .checkbox-group input[type="checkbox"] {
-      margin-right: 6px;
     }
   </style>
 </head>
@@ -128,37 +109,38 @@
           </td>
         </tr>
         <tr>
-          <th>Estados</th>
+          <th>Estado</th>
           <td>
-            <div class="checkbox-group">
-              <label><input type="checkbox" name="estados[]" value="AC">AC</label>
-              <label><input type="checkbox" name="estados[]" value="AL">AL</label>
-              <label><input type="checkbox" name="estados[]" value="AP">AP</label>
-              <label><input type="checkbox" name="estados[]" value="AM">AM</label>
-              <label><input type="checkbox" name="estados[]" value="BA">BA</label>
-              <label><input type="checkbox" name="estados[]" value="CE">CE</label>
-              <label><input type="checkbox" name="estados[]" value="DF">DF</label>
-              <label><input type="checkbox" name="estados[]" value="ES">ES</label>
-              <label><input type="checkbox" name="estados[]" value="GO">GO</label>
-              <label><input type="checkbox" name="estados[]" value="MA">MA</label>
-              <label><input type="checkbox" name="estados[]" value="MT">MT</label>
-              <label><input type="checkbox" name="estados[]" value="MS">MS</label>
-              <label><input type="checkbox" name="estados[]" value="MG">MG</label>
-              <label><input type="checkbox" name="estados[]" value="PA">PA</label>
-              <label><input type="checkbox" name="estados[]" value="PB">PB</label>
-              <label><input type="checkbox" name="estados[]" value="PR">PR</label>
-              <label><input type="checkbox" name="estados[]" value="PE">PE</label>
-              <label><input type="checkbox" name="estados[]" value="PI">PI</label>
-              <label><input type="checkbox" name="estados[]" value="RJ">RJ</label>
-              <label><input type="checkbox" name="estados[]" value="RN">RN</label>
-              <label><input type="checkbox" name="estados[]" value="RS">RS</label>
-              <label><input type="checkbox" name="estados[]" value="RO">RO</label>
-              <label><input type="checkbox" name="estados[]" value="RR">RR</label>
-              <label><input type="checkbox" name="estados[]" value="SC">SC</label>
-              <label><input type="checkbox" name="estados[]" value="SP">SP</label>
-              <label><input type="checkbox" name="estados[]" value="SE">SE</label>
-              <label><input type="checkbox" name="estados[]" value="TO">TO</label>
-            </div>
+            <select name="estado" required>
+              <option value="">-- Selecione o Estado --</option>
+              <option value="AC">AC - Acre</option>
+              <option value="AL">AL - Alagoas</option>
+              <option value="AP">AP - Amapá</option>
+              <option value="AM">AM - Amazonas</option>
+              <option value="BA">BA - Bahia</option>
+              <option value="CE">CE - Ceará</option>
+              <option value="DF">DF - Distrito Federal</option>
+              <option value="ES">ES - Espírito Santo</option>
+              <option value="GO">GO - Goiás</option>
+              <option value="MA">MA - Maranhão</option>
+              <option value="MT">MT - Mato Grosso</option>
+              <option value="MS">MS - Mato Grosso do Sul</option>
+              <option value="MG">MG - Minas Gerais</option>
+              <option value="PA">PA - Pará</option>
+              <option value="PB">PB - Paraíba</option>
+              <option value="PR">PR - Paraná</option>
+              <option value="PE">PE - Pernambuco</option>
+              <option value="PI">PI - Piauí</option>
+              <option value="RJ">RJ - Rio de Janeiro</option>
+              <option value="RN">RN - Rio Grande do Norte</option>
+              <option value="RS">RS - Rio Grande do Sul</option>
+              <option value="RO">RO - Rondônia</option>
+              <option value="RR">RR - Roraima</option>
+              <option value="SC">SC - Santa Catarina</option>
+              <option value="SP">SP - São Paulo</option>
+              <option value="SE">SE - Sergipe</option>
+              <option value="TO">TO - Tocantins</option>
+            </select>
           </td>
         </tr>
         <tr>
